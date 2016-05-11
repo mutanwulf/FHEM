@@ -1,0 +1,6 @@
+{
+  "name": "Fhem",
+  "tagline": "FHEM Hausautomatisierung Homeautomation",
+  "body": "# FHEM\r\nHier stehen einige configs, files, templates und scripts für das kostenlose FHEM drin.",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
