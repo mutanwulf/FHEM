@@ -1,0 +1,26 @@
+# Created by FHEM/98_SVG.pm, 2016-04-19 00:54:42
+set terminal png transparent size <SIZE> crop
+set output '<OUT>.png'
+set xdata time
+set timefmt "%Y-%m-%d_%H:%M:%S"
+set xlabel " "
+set title '<TL>'
+set ytics 
+set y2tics 
+set grid
+set ylabel "Preis"
+set y2label "Preis"
+
+#logdb TS.Me.Esso:Diesel
+#logdb TS.Me.Esso:Super_E5
+#logdb TS.Me.Star:Diesel
+#logdb TS.Me.Star:Super_E5
+#logdb TS.Me.Shell:Diesel
+#logdb TS.Me.Shell:Super_E5
+
+plot "<IN>" using 1:2 axes x1y2 title 'Esso Diesel' ls l0 lw 1 with lines,\
+     "<IN>" using 1:2 axes x1y2 title 'Esso Super' ls l0 lw 1 with lines,\
+     "<IN>" using 1:2 axes x1y2 title 'Star Diesel' ls l0 lw 1 with lines,\
+     "<IN>" using 1:2 axes x1y2 title 'Star Super' ls l0 lw 1 with lines,\
+     "<IN>" using 1:2 axes x1y2 title 'Shell Diesel' ls l0 lw 1 with lines,\
+     "<IN>" using 1:2 axes x1y2 title 'Shell Super' ls l0 lw 1 with lines
